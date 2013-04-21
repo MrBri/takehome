@@ -1,3 +1,6 @@
+# Since the example given doesn't have a parameter on the start method
+# I'm assuming its a setter method.
+
 class Engine
   constructor: (@running) ->
 
