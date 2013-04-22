@@ -18,7 +18,7 @@ alica.friends.push(maggie);
 fred.friends.push(jack);
 jack.friends.push(fred);
 
-// Breadth First Search
+// Breadth-First Search
 // The worst case for time complexity is when every person and friend is searched.
 // Space complexity is proportional to the number of people at the deepest level.
 function connected(node, target) {
