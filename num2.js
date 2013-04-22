@@ -1,8 +1,6 @@
 
 // Just run in node. "node num2.js"
 
-var _ = require('underscore');
-
 var ted = {name: 'ted', friends: []};
 var bill = {name: 'bill', friends: []};
 var jorge = {name: 'jorge', friends: []};
@@ -25,7 +23,7 @@ jack.friends.push(fred);
 // Space complexity is proportional to the number of people at the deepest level.
 function connected(node, target) {
   var queue = [];
-  if (_(node.friends).contains(target)) {return true;}
+  if (node.friends.indexOf(target) != -1) {return true;}
   node.visited = true;
   queue.push(node);
 
@@ -34,7 +32,7 @@ function connected(node, target) {
     var friends = newNode.friends;
     for (var i = 0; i < friends.length; i++) {
       if (!friends[i].visited) {
-        if (_(friends[i].friends).contains(target)) {return true;}
+        if (friends[i].friends.indexOf(target) != -1) {return true;}
         friends[i].visited = true;
         queue.push(friends[i]);
       }
